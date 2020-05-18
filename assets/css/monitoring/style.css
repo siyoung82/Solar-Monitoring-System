@@ -865,23 +865,27 @@
 .table.v2 th{border:1px solid #8097a4; background: #bbd0db}
 .table.v3 td,.table.v3 th{border:1px solid #8097a4; }
 .table.v3 th{border:1px solid #8097a4; background: #bbd0db}
-
-
+.table.v1 td, .table.v1 th {font-size: 20px;}
+.table.v1 tr {border-bottom: 10px solid #323b44}
+.table.v1 th {padding: 20px 0;}
+.table.v1 td {font-weight: bold;}
 .sidebar > .nav .nav-item .select {background: #00b0f0!important}
 .page-item.active .page-link {background: #00b0f0!important}
 .page-link {color: #000}
 .page-link:hover {color: #00b0f0!important}
 .pagination {margin-top: 15px;}
+.form-control,.form-group label,.btn {font-size: 16px;}
+.btn {padding: 0.7rem 1rem!important}
 /**** add ***/
-.num-date {text-align: right;font-size: 18px}
-.num-date strong{color: #2abdf2; font-size: 32px}
-.search-box {background: #fff; border-radius: 5px; padding: 10px 20px}
+.num-date {text-align: right;font-size: 24px}
+.num-date strong{color: #2abdf2; font-size: 48px}
+.search-box {background: #fff; border-radius: 5px; padding: 10px 20px;font-size: 18px;}
 .search-box.v1 {background: #eaf4f8; border:1px solid #b9d4dd; padding: 10px 20px}
 
 .search-box .form-group {margin-bottom: 0!important}
 .btn {padding: 0.5rem 1rem}
 .table-area {background: #fff; display: block; width: 100%; border-radius: 5px}
-.fnt16 {font-size: 16px;}
+.fnt20 {font-size: 20px;}
 .fnt12 {font-size: 12px;}
 
 .circle-ing {display: inline-block; width: 15px; height: 15px; background: #92d050; border-radius: 100px 100px; margin-top: 5px}
