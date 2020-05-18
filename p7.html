@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Solar Monitoring System</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="assets/vendors/iconfonts/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/vendors/iconfonts/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="assets/vendors/iconfonts/typicons/src/font/typicons.css">
+    <link rel="stylesheet" href="assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/monitoring/style.css">
+    <!-- End Layout styles -->
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html">
+            <img src="assets/images/solarXEN.png" alt="logo" /> </a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">
+            <img src="assets/images/logo-mini.svg" alt="logo" /> </a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <ul class="navbar-nav">
+            <li class="nav-item font-weight-semibold d-none d-lg-block admin-title">관리자</li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="time-info"><i class="far fa-clock"></i>2020.3.19(목) 15:12</li>
+			<li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
+              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image"> </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                <div class="dropdown-header text-center">
+                  <img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
+                  <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                </div>
+                <a class="dropdown-item">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+              </div>
+            </li>
+			<li class="nav-item dropdown">
+              <a class="nav-link count-indicator" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="count">7</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+                <a class="dropdown-item py-3">
+                  <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
+                  <span class="badge badge-pill badge-primary float-right">View all</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face10.jpg" alt="image" class="img-sm profile-pic"> </div>
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
+                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face12.jpg" alt="image" class="img-sm profile-pic"> </div>
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
+                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face1.jpg" alt="image" class="img-sm profile-pic"> </div>
+                  <div class="preview-item-content flex-grow py-2">
+                    <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
+                    <p class="font-weight-light small-text"> The meeting is cancelled </p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+				<i class="fas fa-city icon-sm"></i>
+                <span class="menu-title">발전소 선택</span>
+              </a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-chart-pie icon-sm"></i>
+                <span class="menu-title">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" >
+                <i class="fas fa-solar-panel icon-sm"></i>
+                <span class="menu-title">태양광</span>
+              </div>
+              <div>
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">모니터링</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">장치제어</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" >
+				<i class="fas fa-server icon-sm"></i>
+                <span class="menu-title">ESS</span>
+              </div>
+              <div>
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">모니터링</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link select" href="#">장치제어</a>
+                  </li>
+				  <li class="nav-item">
+                    <a class="nav-link" href="#">전력거래</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+			<li class="nav-item">
+              <div class="nav-link" >
+                <i class="fas fa-chart-bar icon-sm"></i>
+                <span class="menu-title">통계분석</span>
+              </div>
+              <div>
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">태양광 현황</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">발전수익 현황</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+			<li class="nav-item">
+              <div class="nav-link" >
+                <i class="fas fa-file-alt icon-sm"></i>
+                <span class="menu-title">운영</span>
+              </div>
+              <div>
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">월별 보고서</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">장치 이벤트</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+			<li class="nav-item">
+              <div class="nav-link" >
+                <i class="fas fa-cog icon-sm"></i>
+                <span class="menu-title">관리</span>
+              </div>
+              <div>
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">사용자 관리</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">발전소 관리</a>
+                  </li>
+				  <li class="nav-item">
+                    <a class="nav-link" href="#">장치 관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+		  <div class="btm-footer">
+			  <div><img src="assets/images/sungchang.png" alt="logo" /></div>
+			  <a href="#">이용약관</a>  |  <a href="#">개인정보처리방침</a>
+		  </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Starts-->
+            <div class="row page-title-header">
+              <div class="col-12">
+                <div class="page-header">
+                  <h4 class="page-title">HOME | ESS | 장치 제어</h4>
+				  <div class="reload"><a href="#"><i class="fas fa-sync-alt"></i></a>2020.3.19 15:27:43</div>
+                </div>
+              </div>
+            </div>
+            <!-- Page Title Header Ends-->
+            <div class="row">
+				<div class="w-box">
+					<div class="row"><!-- cont01 -->
+					  <div class="col-md-4"><canvas id="SOCchart" width="100%" height="100%"></canvas></div>
+					  <div class="col-md-8">
+						
+					    <form>
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">SOC MAX(%)</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" >
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">SOC MIN(%)</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+						  <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">동작 모드</label>
+                            <div class="col-sm-9">
+                              <select class="form-control form-control-lg">
+								<option>CP</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							  </select>
+                            </div>
+                          </div>
+						  <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">월</label>
+                            <div class="col-sm-9">
+                              <select class="form-control form-control-lg" style="width: 40%">
+								<option>1월</option>
+								<option>2월</option>
+								<option>3월</option>
+								<option>4월</option>
+								<option>5월</option>
+							  </select>&nbsp;~&nbsp;
+							  <select class="form-control form-control-lg" style="width: 40%">
+								<option>1월</option>
+								<option>2월</option>
+								<option>3월</option>
+								<option>4월</option>
+								<option>5월</option>
+							  </select>
+                            </div>
+                          </div>
+						  <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">요일</label>
+                            <div class="col-sm-9">
+                              <a href="#" class="select-day select">월</a>
+							  <a href="#" class="select-day">화</a>
+							  <a href="#" class="select-day">수</a>
+							  <a href="#" class="select-day">목</a>
+							  <a href="#" class="select-day">금</a>
+							  <a href="#" class="select-day">토</a>
+							  <a href="#" class="select-day">일</a>
+                            </div>
+                          </div>
+						  <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">시간</label>
+                            <div class="col-sm-9">
+                              <select class="form-control form-control-lg" style="width: 25%">
+								<option>충전</option>
+							  </select>
+							  <input type="text" class="form-control" style="width: 25%" >&nbsp;~&nbsp;
+							  <input type="text" class="form-control" style="width: 25%" >
+							  <button type="submit" class="btn btn-success mr-2"><i class="fas fa-plus"></i> 추가</button>
+                            </div>
+                          </div>
+						  <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">메모</label>
+                            <div class="col-sm-9">
+                              <textarea class="form-control"  rows="4"></textarea>
+                            </div>
+                          </div>
+                        </form>	
+					  </div>
+					</div>
+					<div class="row"><!-- cont02 -->
+						<div class="table-area col-md-12">
+							<table class="table v2">
+							  <colgroup>
+								<col width="10%">
+								<col width="15%">
+								<col width="15%">
+								<col width="15%">
+								<col width="*">
+								<col width="15%">
+							  </colgroup>
+							  <thead>
+								<tr>
+								  <th>구분</th>
+								  <th>시작시간</th>
+								  <th>종료시간</th>
+								  <th>실행시간</th>
+								  <th>메모</th>
+								  <th>관리</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"><button type="submit" class="btn btn-success mr-2"><i class="fas fa-edit"></i> 수정</button><button type="submit" class="btn btn-success mr-2"><i class="fas fa-minus"></i> 삭제</button></td>
+								</tr>
+                                <tr>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"></td>
+								  <td class="text-center"><button type="submit" class="btn btn-success mr-2"><i class="fas fa-edit"></i> 수정</button><button type="submit" class="btn btn-success mr-2"><i class="fas fa-minus"></i> 삭제</button></td>
+								</tr>
+							  </tbody>
+							</table>
+							<div aria-label="Page navigation">
+							  <ul class="pagination justify-content-center">
+								<li class="page-item disabled">
+								  <a class="page-link" href="#" tabindex="-1">이전</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+								  <a class="page-link" href="#">다음</a>
+								</li>
+							  </ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html
+          <footer class="footer">
+            <div class="container-fluid clearfix text-center">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019 Solar Monitoring System. All rights reserved.</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="assets/js/shared/off-canvas.js"></script>
+    <script src="assets/js/shared/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="assets/js/shared/Chart.min.js"></script>
+	<script src="assets/js/shared/utils.js"></script>
+    <!-- End custom js for this page-->
+	<script>
+	//bar01
+		
+	var ctx = document.getElementById("SOCchart");
+	var myChart = new Chart(ctx, {
+	  type: 'bar',
+	  data: {
+		labels: ["MIN(%)", "MAX(%)"],
+		datasets: [{
+		  data: [100, 5],
+		  backgroundColor: '#00cbfa'
+
+		}]
+	  },
+	  options: {
+		  legend: false,  
+		responsive: true,
+		title: {
+			display: true,
+			text: 'SOC'},
+		scales: {
+		  xAxes: [{
+			ticks: {
+			  maxRotation: 10,
+			  minRotation: 5
+			}
+		  }],
+		  yAxes: [{
+			ticks: {
+			  beginAtZero: true
+			}
+		  }]
+		}
+	  }
+	});
+	</script>
+  </body>
+</html>
