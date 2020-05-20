@@ -862,7 +862,7 @@
 .table.v1 thead th:last-child{border-top-right-radius: 5px}
 .table.v1 thead th:first-child{border-top-left-radius: 5px}
 .table.v2 td{border:1px solid #ced9df;}
-.table.v2 th{border:1px solid #8097a4; background: #bbd0db}
+.table.v2 th{border:1px solid #8097a4; background: #bbd0db; vertical-align: middle}
 .table.v3 td,.table.v3 th{border:1px solid #8097a4; }
 .table.v3 th{border:1px solid #8097a4; background: #bbd0db}
 .table.v1 td, .table.v1 th {font-size: 20px;}
@@ -874,12 +874,12 @@
 .page-link {color: #000}
 .page-link:hover {color: #00b0f0!important}
 .pagination {margin-top: 15px;}
-.form-control,.form-group label,.btn {font-size: 16px;}
+.form-control,.form-group label,.btn {font-size: 16px; font-weight: bold}
 .btn {padding: 0.7rem 1rem!important}
 /**** add ***/
 .num-date {text-align: right;font-size: 24px}
 .num-date strong{color: #2abdf2; font-size: 48px}
-.search-box {background: #fff; border-radius: 5px; padding: 10px 20px;font-size: 18px;}
+.search-box {background: #fff; border-radius: 5px; padding: 10px 20px;font-size: 18px; font-weight: bold}
 .search-box.v1 {background: #eaf4f8; border:1px solid #b9d4dd; padding: 10px 20px}
 
 .search-box .form-group {margin-bottom: 0!important}
@@ -911,7 +911,7 @@
 .play-state button.ok:disabled,.play-state button.ng:disabled {background: #d9d9d9;border:1px solid #d9d9d9}
 .play-state h5{font-size: 24px; margin-top: 12px}
 .play-state i {padding-right: 15px;}
-.totle-kwh {font-size: 20px;; padding: 15px 15px 0 15px}
+.totle-kwh {font-size: 20px;; padding: 15px 15px 0 15px;font-weight: bold}
 .totle-kwh.v1 {font-size: 16px;; padding: 15px 15px 0 15px}
 .totle-kwh>div {overflow: hidden;}
 .totle-kwh>div span {display: inline-block; vertical-align: middle}
@@ -919,6 +919,12 @@
 .totle-kwh>div>span:last-child {float: right}
 .totle-kwh strong {font-size: 32px; color: #00b0f0}
 .totle-kwh.v1 strong {font-size: 18px; color: #00b0f0}
+.totle-kwh.v2 {font-size: 15px;}
+.totle-kwh.v2 span {display: block; }
+.totle-kwh.v2 strong {font-size: 17px; color: #00b0f0}
+.totle-kwh.v2>div>span:first-child,.totle-kwh.v2>div>span:last-child {float: inherit}
+.totle-kwh.v2>div>span:first-child {text-align: left}
+.totle-kwh.v2>div>span:last-child {text-align: right}
 
 .canvasCont {position: relative; margin-top: 15px}
 .canvasCont span {position: absolute; font-size: 22px; top: 50%; left: 0; width: 100%}
@@ -933,3 +939,20 @@
 .w-box {background: #fff; width: 100%; height: 100%; border-radius: 10px; min-height: 700px; padding: 30px;}
 a.select-day {display: inline-block; padding: 3px 10px; background: #b7c8ce; border-radius: 5px 5px; color: #546368}
 a.select-day:hover,a.select-day.select {background: #0082cb; color: #fff; text-decoration: none}
+.smp-area>table td,.smp-area>table th {font-size: 20px;text-align: center!important}
+.smp-area>table td.max {color: #ff0000}
+.smp-area>table td.min {color: #21b7b5}
+.smp-area>table td.average {color: #0070c0}
+.smp-area p span {float: right;}
+.stock-info {font-size: 30px; text-align: center; font-weight: bold}
+.stock-info>div {display: block; overflow: hidden; padding: 0 10%; border-right: 1px solid #e2e2e2}
+.stock-info.v1>div {border-right:0 }
+.stock-info>div>span:first-child {float: left;}
+.stock-info>div>span:last-child {float: right;}
+.stock-info>div>span.max {color: #ff0000}
+.stock-info>div>span.min {color: #21b7b5}
+.stock-info>div>span.average {color: #0070c0}
+
+.card .card-body.v1 {padding: 20px 10px 30px;}
+.report-ico {font-size: 80px; text-align: right; margin-top: 18px; color: #798c91}
+.none-report {text-align: center; padding-top: 45px; font-weight: bold}
