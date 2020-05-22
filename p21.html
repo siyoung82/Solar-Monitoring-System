@@ -191,13 +191,13 @@
               </div>
               <div>
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item select">
+                  <li class="nav-item">
                     <a class="nav-link" href="#">사용자 관리</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">발전소 관리</a>
                   </li>
-				  <li class="nav-item">
+				  <li class="nav-item select">
                     <a class="nav-link" href="#">장치 관리</a>
                   </li>
                 </ul>
@@ -216,7 +216,7 @@
             <div class="row page-title-header">
               <div class="col-12">
                 <div class="page-header">
-                  <h4 class="page-title">HOME | 관리 | 사용자 관리</h4>
+                  <h4 class="page-title">HOME | 관리 | 장치 관리</h4>
                 </div>
               </div>
             </div>
@@ -227,23 +227,17 @@
 					  <div class="col-md-12">
 						<div class="search-box v1 grid-margin">
 						  <div class="row">
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">ID</label>
-									<div class="col-sm-10">
-									  <input type="text" class="form-control" >
+									<label class="col-sm-3 col-form-label">장치종류</label>
+									<div class="col-sm-9">
+									  <select class="form-control">
+									  <option>트레커</option>
+									  </select>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3">
-								<div class="form-group row">
-									<label class="col-sm-2 col-form-label">이름</label>
-									<div class="col-sm-10">
-									  <input type="text" class="form-control" >
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 text-right">
+							<div class="col-md-8 text-right">
 							  <button type="submit" class="btn btn-success mr-2"><i class="fas fa-search"></i>검색</button>  
 							</div>  
 						  </div>
@@ -257,40 +251,36 @@
 								<col width="5%">
 								<col width="10%">
 								<col width="15%">
-								<col width="15%">
-								<col width="15%">
-								<col width="15%">
+								<col width="10%">
+								<col width="10%">
 								<col width="*">
 							  </colgroup>
 							  <thead>
 								<tr>
 								  <th><input type="checkbox"></th>
-								  <th>등급</th>
 								  <th>ID</th>
-								  <th>이름</th>
-								  <th>연락처</th>
-								  <th>이메일</th>
-								  <th>주소</th>
+								  <th>모델명</th>
+								  <th>A/S 담당자</th>
+								  <th>A/S연락처</th>
+								  <th>메모</th>
 								</tr>
 							  </thead>
 							  <tbody>
 								<tr>
 								  <td class="text-center"><input type="checkbox"></td>
-								  <td class="text-center">일반사용자</td>
-								  <td class="text-center">sdsdsdsd</td>
+								  <td class="text-center">0123</td>
+								  <td class="text-left">DSP-123K6-OD</td>
 								  <td class="text-center">홍길동</td>
 								  <td class="text-center">010-1234-5678</td>
-								  <td class="text-left"><a href="#">abcdefghij@google.com </a></td>
-								  <td class="text-center">충북 청주시 오창읍 새누리미래터 306호</td>
+								  <td class="text-center"></td>
 								</tr>
                                 <tr>
 								  <td class="text-center"><input type="checkbox"></td>
-								  <td class="text-center">일반사용자</td>
-								  <td class="text-center">sdsdsdsd</td>
+								  <td class="text-center">0123</td>
+								  <td class="text-left">DSP-123K6-OD</td>
 								  <td class="text-center">홍길동</td>
 								  <td class="text-center">010-1234-5678</td>
-								  <td class="text-left"><a href="#">abcdefghij@google.com </a></td>
-								  <td class="text-center">충북 청주시 오창읍 새누리미래터 306호</td>
+								  <td class="text-center"></td>
 								</tr>
 							  </tbody>
 							</table>
@@ -307,7 +297,6 @@
 								</li>
 							  </ul>
 							</div>
-
 						</div>
 						<div class="col-md-12 text-right mb-2"><button type="submit" class="btn btn-primary mr-2">추가</button><button type="submit" class="btn btn-primary">삭제</button></div>
 
