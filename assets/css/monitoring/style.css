@@ -865,10 +865,18 @@
 .table.v2 th{border:1px solid #8097a4; background: #bbd0db; vertical-align: middle}
 .table.v3 td,.table.v3 th{border:1px solid #8097a4; }
 .table.v3 th{border:1px solid #8097a4; background: #bbd0db}
-.table.v1 td, .table.v1 th {font-size: 20px;}
+.table.v1 td, .table.v1 th,.table.v2 td, .table.v2 th,.table.v3 td, .table.v3 th {font-size: 18px; font-weight: bold}
+.table.v1 td input[type="checkbox"],.table.v1 th input[type="checkbox"],.table.v2 td input[type="checkbox"],.table.v2 th input[type="checkbox"], .table.v3 td input[type="checkbox"],.table.v3 th input[type="checkbox"]{width: 18px; height: 18px}
 .table.v1 tr {border-bottom: 10px solid #323b44}
 .table.v1 th {padding: 20px 0;}
 .table.v1 td {font-weight: bold;}
+.table.v4 td {background: #fff;}
+.table.v4 th {background: #acd4e9;}
+.table.v5 td,.table.v5 th{border:1px solid #8097a4; }
+.table.v5 th{border:1px solid #8097a4; background: #bbd0db}
+.table.v5 td, .table.v5 th {font-size: 24px; font-weight: bold; text-align: center; padding: 15px 0}
+.table.v5 td strong {color: #139fd2;font-size: 38px; padding-right: 5px}
+.table th span.necessary {color: #ff0024; padding-left: 5px}
 .sidebar > .nav .nav-item .select {background: #00b0f0!important}
 .page-item.active .page-link {background: #00b0f0!important}
 .page-link {color: #000}
@@ -930,6 +938,14 @@
 .canvasCont span {position: absolute; font-size: 22px; top: 50%; left: 0; width: 100%}
 .canvasCont .total-graph-rate{position: absolute; font-size: 32px; top: 35%; left: 0; width: 100%}
 .canvasCont .total-graph-rate strong {font-size: 38px; color: #da1b6c}
+.canvasCont .total-graph-rate.v1 strong {font-size: 38px; color: #333}
+.d-chart {height: 250px;}
+.d-chart span {color: #33b9e9!important; font-size: 28px; font-weight: bold; }
+.operation {height: 250px; margin-top: 15px;}
+.operation h5 {font-size: 28px; text-align: center}
+.operation-state {text-align: center}
+.operation-state a {width: 100px; background: #d9d9d9; display: inline-block; height: 100px; border-radius: 100px 100px; text-align: center; line-height: 100px; color: #333; font-size: 22px; font-weight: bold; margin: 0 10px}
+.operation-state a:hover,.operation-state a.select {background: #ff0000; color: #fff; text-decoration: none}
 .page-header .reload {color: #fff; position: absolute; right: 20px;}
 .page-header .reload i {padding-right: 10px;}
 .page-header .reload a {color: #21b7b5!important}
@@ -937,6 +953,8 @@
 .card-body .open-new {position: absolute; font-size: 20px; z-index: 999}
 .card-body a.open-new {color: #333}
 .w-box {background: #fff; width: 100%; height: 100%; border-radius: 10px; min-height: 700px; padding: 30px;}
+.w-box h4 {font-weight: bold; font-size: 24px; position: relative}
+.w-box h4 .setting-switch {position: absolute; right: 0; top: -15px;}
 a.select-day {display: inline-block; padding: 3px 10px; background: #b7c8ce; border-radius: 5px 5px; color: #546368}
 a.select-day:hover,a.select-day.select {background: #0082cb; color: #fff; text-decoration: none}
 .smp-area>table td,.smp-area>table th {font-size: 20px;text-align: center!important}
@@ -956,3 +974,122 @@ a.select-day:hover,a.select-day.select {background: #0082cb; color: #fff; text-d
 .card .card-body.v1 {padding: 20px 10px 30px;}
 .report-ico {font-size: 80px; text-align: right; margin-top: 18px; color: #798c91}
 .none-report {text-align: center; padding-top: 45px; font-weight: bold}
+.plant-tabs {border-bottom: 0}
+.plant-tabs .nav-link {font-size: 16px; padding: 20px 30px 15px; color: #333333}
+.plant-cont {padding: 15px; background: #e7eff3}
+.plant-tabs .nav-link.active, .plant-tabs .nav-item.show .nav-link {background: #e7eff3;border-color: #e7eff3; color: #2196f3}
+.setting-switch {display: block; position: relative; height: 100px; padding: 20px}
+.setting-switch>span {height: 50px; line-height: 50px; vertical-align: top; padding: 0 10px; font-size: 24px; font-weight: bold}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input.success:checked + .slider {
+  background-color: #8bc34a;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(54px);
+  -ms-transform: translateX(54px);
+  transform: translateX(54px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.sel-night,.sel-night.select,.sel-night:hover {background: url("../../images/bg-night.jpg") no-repeat;}
+.sel-snow,.sel-snow.select,.sel-snow:hover {background: url("../../images/bg-snow.jpg") no-repeat;}
+.sel-rain,.sel-rain.select,.sel-rain:hover {background: url("../../images/bg-rain.jpg") no-repeat;}
+.sel-wind,.sel-wind.select,.sel-wind:hover {background: url("../../images/bg-wind.jpg") no-repeat;}
+.sel-night,.sel-snow,.sel-rain,.sel-wind {height: 500px; width: 100%; background-size: cover; border-radius: 10px; position: relative; opacity: 0.6}
+.sel-night.select,.sel-night:hover,.sel-rain.select,.sel-rain:hover,.sel-wind.select,.sel-wind:hover,.sel-snow.select,.sel-snow:hover{height: 500px; width: 100%; background-size: cover; border-radius: 10px; position: relative; opacity: 1}
+
+.sel-night.select .weather-circle,.sel-night:hover .weather-circle,
+.sel-snow.select .weather-circle,.sel-snow:hover .weather-circle,
+.sel-rain.select .weather-circle,.sel-rain:hover .weather-circle,
+.sel-wind.select .weather-circle,.sel-wind:hover .weather-circle
+{width: 260px; height: 260px; border-radius: 200px 200px; display: inline-block; position: absolute; top:50%; left:50%; margin-top: -130px; margin-left: -130px; z-index: 99; background: #00b0f0; opacity: 1 }
+.weather-circle p {color: #fff; text-align: center; font-size: 32px;}
+.weather-circle p:first-child {font-size: 66px; margin-bottom: 0; padding-top: 40px;}
+.sel-night .weather-circle,.sel-rain .weather-circle,.sel-wind .weather-circle,.sel-snow .weather-circle {width: 260px; height: 260px; border-radius: 200px 200px; display: inline-block; position: absolute; top:50%; left:50%; margin-top: -130px; margin-left: -130px; z-index: 99; background: #000; opacity: 0.8}
+
+.detail-area {border: 1px solid #2a343e; margin-top: 20px;}
+.detail-area h6 {background: #45525f; font-size: 18px; padding: 15px; color: #fff;}
+.detail-area .detail-scroll {height: 230px; overflow-x: hidden; overflow-y: auto;padding: 0 20px 20px; }
+
+.map-area {width: 100%; height: 100%; background-size:100% 100%; background-image: url("../../images/map.jpg"); background-repeat: no-repeat; position: relative}
+.map-info {position: absolute; bottom: 20px; left: 20px; display: inline-block; background: #00b0f0; border-radius: 10px; padding: 20px;}
+.map-info li { color: #fff;}
+.balloon {
+ position:relative;
+ width:auto;
+ background: #00b0f0;
+  border-radius: 5px;
+ padding: 10px 30px;
+ font-weight: bold
+}
+.balloon:after {
+ border-top:10px solid #00b0f0;
+ border-left: 10px solid transparent;
+ border-right: 10px solid transparent;
+ border-bottom: 0px solid transparent;
+ content:"";
+ position:absolute;
+ bottom:-10px;
+ left:50%;
+ margin-left: -10px;
+}
+
+.nav-pills .nav-link {font-size: 20px;}
+.graph-area {width: 100%; }
+.auth.auth-bg-1 {background: url("../../images/login.png") no-repeat; background-size: cover;}
+.auth.theme-one .auto-form-wrapper {background-color: transparent}
+.auth.theme-one .auto-form-wrapper .form-group .input-group .form-control {border-radius: 5px; border: 0}
+.auth.theme-one .auto-form-wrapper .form-group .submit-btn {font-size: 18px;}
+.auto-form-wrapper .site-name {color: #fff; font-size: 38px; font-weight: bold; margin-bottom: 0}
+.auto-form-wrapper .site-name-en {color: #2196f3; font-size: 18px;}
+.login-footer {background: #fff; position: fixed; bottom: 0; left: 0; right: 0; font-size: 12px; padding: 15px 15px 15px 145px;}
+.login-footer .footer-logo {position:absolute;  left: 20px;}
+.login-footer .footer-logo img {height: 30px; width: auto}

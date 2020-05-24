@@ -223,7 +223,7 @@
             <!-- Page Title Header Ends-->
             <div class="row">
 				<div class="w-box">
-					<h4>사용자 등록</h4>
+					<h4>사용자 수정</h4>
 					<div class="row"><!-- cont01 -->
 					  <div class="table-area col-md-12">
 							<table class="table v3">
@@ -235,7 +235,7 @@
 								<tr>
 									<th>등급<span class="necessary">*</span></th>
 									<td>
-										<select class="form-control" style="width: 50%;">
+										<select class="form-control" style="width: 50%;" disabled>
 										 <option>관리자</option>
 									    </select>
 									</td>
@@ -243,33 +243,33 @@
 								<tr>
 									<th>연락처(ID)<span class="necessary">*</span></th>
 									<td>
-										<input type="text" class="form-control" value="010-1234-5678" style="width: 50%;">
+										<input type="text" disabled="disabled" class="form-control" style="width: 50%;" value="010-1234-5678">
 										<span class="text-primary fnt12">※ ID는 연락처로 사용됩니다.</span>
 									</td>
 								</tr>
 								<tr>
 									<th>새 비밀번호<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
+									<td><input type="password" class="form-control" style="width: 50%;" value="●●●●"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">비밀번호확인</button></td>
 								</tr>
 								<tr>
 									<th>비밀번호 확인<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
+									<td><input type="password" class="form-control" style="width: 50%;" value="●●●●"></td>
 								</tr>
 								<tr>
 									<th>이름<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
+									<td><input type="text" class="form-control" style="width: 50%;" value="홍길동"></td>
 								</tr>
 								<tr>
 									<th>주소<span class="necessary">*</span></th>
 									<td>
-										<p><input type="text" class="form-control" style="width: 50%;"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">우편번호찾기</button></p>
-										<p><input type="text" class="form-control" style="width: 80%;"></p>
-										<p style="margin-bottom: 0"><input type="text" class="form-control" style="width: 80%;"></p>
+										<p><input type="text" class="form-control" style="width: 50%;" value="28607"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">우편번호찾기</button></p>
+										<p><input type="text" class="form-control" style="width: 80%;" value="청주시 청원구 오창읍 양청송대길 10"></p>
+										<p style="margin-bottom: 0"><input type="text" class="form-control" style="width: 80%;" value="3층 임대공장 15"></p>
 									</td>
 								</tr>
 								<tr>
 									<th>이메일<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
+									<td><input type="text" class="form-control" style="width: 50%;" value="asdfasdf@gmail.com" ></td>
 								</tr>
 								<tr>
 									<th>메모<span class="necessary">*</span></th>
@@ -278,7 +278,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="col-md-12 text-right mb-2 mt-3"><button type="submit" class="btn btn-primary mr-2">추가</button><button type="submit" class="btn btn-primary">삭제</button></div>
+						<div class="col-md-12 text-right mb-2 mt-3"><button type="submit" class="btn btn-primary mr-2">수정</button><button type="submit" class="btn btn-primary">취소</button></div>
 					</div>
 				</div>
 			</div>

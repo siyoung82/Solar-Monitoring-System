@@ -191,13 +191,13 @@
               </div>
               <div>
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item select">
+                  <li class="nav-item">
                     <a class="nav-link" href="#">사용자 관리</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">발전소 관리</a>
                   </li>
-				  <li class="nav-item">
+				  <li class="nav-item select">
                     <a class="nav-link" href="#">장치 관리</a>
                   </li>
                 </ul>
@@ -216,14 +216,14 @@
             <div class="row page-title-header">
               <div class="col-12">
                 <div class="page-header">
-                  <h4 class="page-title">HOME | 관리 | 사용자 관리</h4>
+                  <h4 class="page-title">HOME | 관리 | 장치 관리</h4>
                 </div>
               </div>
             </div>
             <!-- Page Title Header Ends-->
             <div class="row">
 				<div class="w-box">
-					<h4>사용자 등록</h4>
+					<h4>장치 등록</h4>
 					<div class="row"><!-- cont01 -->
 					  <div class="table-area col-md-12">
 							<table class="table v3">
@@ -233,52 +233,45 @@
 								</colgroup>
 								<tbody>
 								<tr>
-									<th>등급<span class="necessary">*</span></th>
+									<th>장치 타입<span class="necessary">*</span></th>
 									<td>
 										<select class="form-control" style="width: 50%;">
-										 <option>관리자</option>
+										 <option>ESS</option>
 									    </select>
 									</td>
 								</tr>
 								<tr>
-									<th>연락처(ID)<span class="necessary">*</span></th>
-									<td>
-										<input type="text" class="form-control" value="010-1234-5678" style="width: 50%;">
-										<span class="text-primary fnt12">※ ID는 연락처로 사용됩니다.</span>
-									</td>
+									<th>모델명<span class="necessary">*</span></th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="DSP-123K5-OD"></td>
 								</tr>
 								<tr>
-									<th>새 비밀번호<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
+									<th>PCS 용량<span class="necessary">*</span></th>
+									<td><input type="text" class="form-control text-right" style="width: 30%;" value="100.0"><span class="ml-2">kW</span></td>
 								</tr>
 								<tr>
-									<th>비밀번호 확인<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
+									<th>BATT. 용량<span class="necessary">*</span></th>
+									<td><input type="text" class="form-control text-right" style="width: 30%;" value="100.0"><span class="ml-2">kW</span></td>
 								</tr>
 								<tr>
-									<th>이름<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
+									<th>BATT. 타입</th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="리튬이온"></td>
 								</tr>
 								<tr>
-									<th>주소<span class="necessary">*</span></th>
-									<td>
-										<p><input type="text" class="form-control" style="width: 50%;"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">우편번호찾기</button></p>
-										<p><input type="text" class="form-control" style="width: 80%;"></p>
-										<p style="margin-bottom: 0"><input type="text" class="form-control" style="width: 80%;"></p>
-									</td>
+									<th>A/S 담당자</th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="홍길동"></td>
 								</tr>
 								<tr>
-									<th>이메일<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
+									<th>A/S 연락처</th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="010-1234-5678"></td>
 								</tr>
 								<tr>
-									<th>메모<span class="necessary">*</span></th>
+									<th>메모</th>
 									<td><textarea class="form-control" rows="5"></textarea></td>
 								</tr>
 								</tbody>
 							</table>
 						</div>
-						<div class="col-md-12 text-right mb-2 mt-3"><button type="submit" class="btn btn-primary mr-2">추가</button><button type="submit" class="btn btn-primary">삭제</button></div>
+						<div class="col-md-12 text-right mb-2 mt-3"><button type="submit" class="btn btn-primary mr-2">등록</button><button type="submit" class="btn btn-primary">취소</button></div>
 					</div>
 				</div>
 			</div>

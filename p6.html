@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/vendors/iconfonts/ionicons/css/ionicons.css">
     <link rel="stylesheet" href="assets/vendors/iconfonts/typicons/src/font/typicons.css">
     <link rel="stylesheet" href="assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
-	<link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- plugin css for this page -->
     <!-- End plugin css for this page -->
@@ -21,6 +21,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="assets/css/monitoring/style.css">
     <!-- End Layout styles -->
+	
   </head>
   <body>
     <div class="container-scroller">
@@ -100,13 +101,6 @@
           <ul class="nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-				<select class="form-control form-control-lg">
-				<option>성창주식회사</option>
-			    </select>
-              </a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="#">
 				<i class="fas fa-city icon-sm"></i>
                 <span class="menu-title">발전소 선택</span>
               </a>
@@ -124,7 +118,7 @@
               </div>
               <div>
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
+                  <li class="nav-item select">
                     <a class="nav-link" href="#">모니터링</a>
                   </li>
                   <li class="nav-item">
@@ -191,7 +185,7 @@
               </div>
               <div>
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item select">
+                  <li class="nav-item">
                     <a class="nav-link" href="#">사용자 관리</a>
                   </li>
                   <li class="nav-item">
@@ -216,72 +210,107 @@
             <div class="row page-title-header">
               <div class="col-12">
                 <div class="page-header">
-                  <h4 class="page-title">HOME | 관리 | 사용자 관리</h4>
+                  <h4 class="page-title">HOME | ESS | 모니터링</h4>
+				  <div class="reload"><a href="#"><i class="fas fa-sync-alt"></i></a>2020.3.19 15:27:43</div>
                 </div>
               </div>
             </div>
             <!-- Page Title Header Ends-->
-            <div class="row">
-				<div class="w-box">
-					<h4>사용자 등록</h4>
-					<div class="row"><!-- cont01 -->
-					  <div class="table-area col-md-12">
-							<table class="table v3">
-								<colgroup>
-									<col width="30%">
-									<col width="*">
-								</colgroup>
-								<tbody>
-								<tr>
-									<th>등급<span class="necessary">*</span></th>
-									<td>
-										<select class="form-control" style="width: 50%;">
-										 <option>관리자</option>
-									    </select>
-									</td>
-								</tr>
-								<tr>
-									<th>연락처(ID)<span class="necessary">*</span></th>
-									<td>
-										<input type="text" class="form-control" value="010-1234-5678" style="width: 50%;">
-										<span class="text-primary fnt12">※ ID는 연락처로 사용됩니다.</span>
-									</td>
-								</tr>
-								<tr>
-									<th>새 비밀번호<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
-								</tr>
-								<tr>
-									<th>비밀번호 확인<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
-								</tr>
-								<tr>
-									<th>이름<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
-								</tr>
-								<tr>
-									<th>주소<span class="necessary">*</span></th>
-									<td>
-										<p><input type="text" class="form-control" style="width: 50%;"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">우편번호찾기</button></p>
-										<p><input type="text" class="form-control" style="width: 80%;"></p>
-										<p style="margin-bottom: 0"><input type="text" class="form-control" style="width: 80%;"></p>
-									</td>
-								</tr>
-								<tr>
-									<th>이메일<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
-								</tr>
-								<tr>
-									<th>메모<span class="necessary">*</span></th>
-									<td><textarea class="form-control" rows="5"></textarea></td>
-								</tr>
-								</tbody>
-							</table>
+            <div class="row"><!-- cont01 -->
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-header"><h4 class="card-title mb-0">PCS</h4></div>
+				  <div class="card-body">
+                    <div class="row operation">
+						<div class="col-md-4"><h5 class="mt-4">운전상태</h5><div class="text-center mt-3"><i class="fas fa-server" style="font-size: 100px"></i></div></div>
+						<div class="col-md-8">
+							<div class="text-right setting-switch">
+								<span>동작</span>
+								<label class="switch ">
+								  <input type="checkbox" class="success">
+								  <span class="slider round"></span>
+								</label>
+								<span>정지</span>
+							</div>
+							<div class="operation-state">
+								<a href="#" class="select">대기</a>
+								<a href="#">충전</a>
+								<a href="#">방전</a>
+								<a href="#">정지</a>
+							</div>
 						</div>
-						<div class="col-md-12 text-right mb-2 mt-3"><button type="submit" class="btn btn-primary mr-2">추가</button><button type="submit" class="btn btn-primary">삭제</button></div>
 					</div>
-				</div>
-			</div>
+					<div class="mt-5 mb-5">
+						<table class="table v5">
+							<colgroup>
+								<col width="30%">
+								<col width="*">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>전압</th>
+								<td><strong>368</strong>V</td>
+							</tr>
+							<tr>
+								<th>전류</th>
+								<td><strong>368</strong>A</td>
+							</tr>
+							<tr>
+								<th>전력</th>
+								<td><strong>368</strong>W</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div><canvas id="line-chart1"></canvas></div> 
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-header"><h4 class="card-title mb-0">BMS</h4></div>
+				  <div class="card-body">
+                    <div class="row">
+						<div class="col-md-6">
+							<div id="play1" class="canvasCont text-center d-chart">
+								<div class="total-graph-rate v1"><strong>SOC</strong></div>
+								<canvas id="play1Chart" width="250" height="250" style="display: inline-block;"></canvas>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div id="play2" class="canvasCont text-center d-chart">
+								<div class="total-graph-rate v1"><strong>SOH</strong></div>
+								<canvas id="play2Chart" width="250" height="250" style="display: inline-block;"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="mt-5 mb-5">
+						<table class="table v5">
+							<colgroup>
+								<col width="30%">
+								<col width="*">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>전압</th>
+								<td><strong>368</strong>V</td>
+							</tr>
+							<tr>
+								<th>전류</th>
+								<td><strong>368</strong>A</td>
+							</tr>
+							<tr>
+								<th>전력</th>
+								<td><strong>368</strong>W</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div><canvas id="line-chart2"></canvas></div> 
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html
@@ -310,5 +339,109 @@
     <script src="assets/js/shared/Chart.min.js"></script>
 	<script src="assets/js/shared/utils.js"></script>
     <!-- End custom js for this page-->
+	<script>
+		//canvas
+
+		var rate1 = 54.35;
+		var rate2 = 54.35;
+
+		createChart(getData(rate1),'play1');
+		createChart(getData(rate2),'play2');
+
+
+		function getData(rate){
+		  var leftover = 100- rate;
+
+		  var data = {
+
+			  datasets: [
+				  {
+					  data: [rate, leftover],
+					  backgroundColor: [
+						  "#f672a7",
+						  //"#c0c0c0"
+						  "#7f7f7f"
+					  ]
+				  }]
+		  };
+		  return data;
+		}
+
+		function createChart(data, id){
+		  //activate chart.js
+			//var ctx = document.getElementById('playPerc');
+		  var ctx = document.getElementById(id+"Chart");
+			//use data and options
+			var playPerc = new Chart(ctx, {
+			  type: 'doughnut',
+			  data: data,
+			  options: {
+				  //options defined
+				  responsive: false,
+				  cutoutPercentage: 80,
+				  legend: false,
+				  layout: {padding: 10},
+				  tooltips: {enabled: false},
+				  elements: {arc: { borderWidth: 0}},
+				  animation: {onComplete: function() {
+					  //this.ctx.fillText("test%", 75, 75, 75);
+					  //alert("Finished!");
+					  document.getElementById(id).insertAdjacentHTML('beforeend',"<span>"+data.datasets[0].data[0]+"%</span>");
+					}
+				  }
+				}
+			});
+
+		}
+
+		//line
+		new Chart(document.getElementById("line-chart1"), {
+        type: 'line',
+        data: {
+            labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+            datasets: [{
+                data: [86,114,106,106,107,111,133,221,783,2478],
+                label: "전압",
+                borderColor: "#ff7c00",
+                fill: false
+            }, {
+                data: [282,350,411,502,635,809,947,1402,3700,5267],
+                label: "전류",
+                borderColor: "#35322f",
+                fill: false
+            }
+            ]
+        },
+        options: {
+            title: {
+                display: false,
+            }
+        }
+    });
+		//line
+		new Chart(document.getElementById("line-chart2"), {
+        type: 'line',
+        data: {
+            labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+            datasets: [{
+                data: [86,114,106,106,107,111,133,221,783,2478],
+                label: "전압",
+                borderColor: "#ff7c00",
+                fill: false
+            }, {
+                data: [282,350,411,502,635,809,947,1402,3700,5267],
+                label: "전류",
+                borderColor: "#35322f",
+                fill: false
+            }
+            ]
+        },
+        options: {
+            title: {
+                display: false,
+            }
+        }
+    });
+	</script>
   </body>
 </html>

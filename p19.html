@@ -191,10 +191,10 @@
               </div>
               <div>
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item select">
+                  <li class="nav-item">
                     <a class="nav-link" href="#">사용자 관리</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item select">
                     <a class="nav-link" href="#">발전소 관리</a>
                   </li>
 				  <li class="nav-item">
@@ -216,69 +216,208 @@
             <div class="row page-title-header">
               <div class="col-12">
                 <div class="page-header">
-                  <h4 class="page-title">HOME | 관리 | 사용자 관리</h4>
+                  <h4 class="page-title">HOME | 관리 | 발전소 관리</h4>
                 </div>
               </div>
             </div>
             <!-- Page Title Header Ends-->
             <div class="row">
 				<div class="w-box">
-					<h4>사용자 등록</h4>
+					<h4>발전소 수정</h4>
 					<div class="row"><!-- cont01 -->
 					  <div class="table-area col-md-12">
 							<table class="table v3">
 								<colgroup>
-									<col width="30%">
-									<col width="*">
+									<col width="15%">
+									<col width="35%">
+									<col width="15%">
+									<col width="35%">
 								</colgroup>
 								<tbody>
 								<tr>
-									<th>등급<span class="necessary">*</span></th>
-									<td>
-										<select class="form-control" style="width: 50%;">
-										 <option>관리자</option>
-									    </select>
-									</td>
-								</tr>
-								<tr>
-									<th>연락처(ID)<span class="necessary">*</span></th>
-									<td>
-										<input type="text" class="form-control" value="010-1234-5678" style="width: 50%;">
-										<span class="text-primary fnt12">※ ID는 연락처로 사용됩니다.</span>
-									</td>
-								</tr>
-								<tr>
-									<th>새 비밀번호<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
-								</tr>
-								<tr>
-									<th>비밀번호 확인<span class="necessary">*</span></th>
-									<td><input type="password" class="form-control" style="width: 50%;"></td>
-								</tr>
-								<tr>
-									<th>이름<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
+									<th>발전소 ID</th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="001" disabled="disabled"></td>
+									<th>발전소명<span class="necessary">*</span></th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="청주 노인정"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">중복확인</button></td>
 								</tr>
 								<tr>
 									<th>주소<span class="necessary">*</span></th>
-									<td>
-										<p><input type="text" class="form-control" style="width: 50%;"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">우편번호찾기</button></p>
-										<p><input type="text" class="form-control" style="width: 80%;"></p>
-										<p style="margin-bottom: 0"><input type="text" class="form-control" style="width: 80%;"></p>
+									<td colspan="3">
+										<p><input type="text" class="form-control" style="width: 50%;" value="충북 청주시 청원구 가덕면 산1"><button type="button" class="btn btn-outline-primary btn-sm ml-2" style="vertical-align: top;">주소검색</button></p>
+										<p style="margin-bottom: 0"><input type="text" class="form-control" style="width: 80%;" value="903호"></p>
 									</td>
 								</tr>
 								<tr>
-									<th>이메일<span class="necessary">*</span></th>
-									<td><input type="text" class="form-control" style="width: 50%;"></td>
+									<th>시공사</th>
+									<td colspan="3"><input type="text" class="form-control" style="width: 50%;" value="성창주식회사"></td>
 								</tr>
 								<tr>
-									<th>메모<span class="necessary">*</span></th>
-									<td><textarea class="form-control" rows="5"></textarea></td>
+									<th>담당자</th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="홍길동"></td>
+									<th>연락처</th>
+									<td><input type="text" class="form-control" style="width: 50%;" value="010-1234-5678"></td>
+								</tr>
+								<tr>
+									<th>설치일자<span class="necessary">*</span></th>
+									<td colspan="3"><input type="text" class="form-control" style="width: 50%;" value=" 2019-7-31"></td>
+								</tr>
+								<tr>
+									<th>발전소 사진</th>
+									<td colspan="3"><input type="file" class="form-control" style="width: 80%;"></td>
+								</tr>
+								<tr>
+									<th>메모</th>
+									<td colspan="3"><textarea class="form-control" rows="5"></textarea></td>
+								</tr>
+								<tr>
+									<th>설비</th>
+									<td colspan="3">
+										<ul class="nav nav-tabs plant-tabs" id="plant" role="tablist">
+											<li class="nav-item" role="presentation">
+												<a class="nav-link active" id="plant01-tab" data-toggle="tab" href="#plant01" role="tab" aria-controls="plant01" aria-selected="true">전체</a>
+											</li>
+											<li class="nav-item" role="presentation">
+												<a class="nav-link" id="plant02-tab" data-toggle="tab" href="#plant02" role="tab" aria-controls="plant02" aria-selected="false">인버터</a>
+											</li>
+											<li class="nav-item" role="presentation">
+												<a class="nav-link" id="plant03-tab" data-toggle="tab" href="#plant03" role="tab" aria-controls="plant03" aria-selected="false">모니터&제어</a>
+											</li>
+											<li class="nav-item" role="presentation">
+												<a class="nav-link" id="plant04-tab" data-toggle="tab" href="#plant04" role="tab" aria-controls="plant04" aria-selected="false">ESS</a>
+											</li>
+										</ul>
+										<div class="tab-content plant-cont" id="myTabContent">
+											<div class="tab-pane fade show active" id="plant01" role="tabpanel" aria-labelledby="plant01-tab">
+												<table class="table v4">
+													<colgroup>
+														<col width="10%">
+														<col width="20%">
+														<col width="*">
+													</colgroup>
+													<tbody>
+													<tr>
+														<th>ID</th>
+														<th>명칭</th>
+														<th>모델명</th>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td>
+															<select class="form-control" style="width: 50%;">
+															<option>다쓰테크 DSP-123K6-OD</option>
+															</select>
+															<button type="submit" class="btn btn-danger ml-2" style="vertical-align: top">- 삭제</button>
+														</td>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td><button type="submit" class="btn btn-outline-success ml-2" style="vertical-align: top">+ 인버터추가</button></td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="plant02" role="tabpanel" aria-labelledby="plant02-tab">
+												<table class="table v4">
+													<colgroup>
+														<col width="10%">
+														<col width="20%">
+														<col width="*">
+													</colgroup>
+													<tbody>
+													<tr>
+														<th>ID</th>
+														<th>명칭</th>
+														<th>모델명</th>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td>
+															<select class="form-control" style="width: 50%;">
+															<option>다쓰테크 DSP-123K6-OD</option>
+															</select>
+															<button type="submit" class="btn btn-danger ml-2" style="vertical-align: top">- 삭제</button>
+														</td>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td><button type="submit" class="btn btn-outline-success ml-2" style="vertical-align: top">+ 인버터추가</button></td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="plant03" role="tabpanel" aria-labelledby="plant03-tab">
+												<table class="table v4">
+													<colgroup>
+														<col width="10%">
+														<col width="20%">
+														<col width="*">
+													</colgroup>
+													<tbody>
+													<tr>
+														<th>ID</th>
+														<th>명칭</th>
+														<th>모델명</th>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td>
+															<select class="form-control" style="width: 50%;">
+															<option>다쓰테크 DSP-123K6-OD</option>
+															</select>
+															<button type="submit" class="btn btn-danger ml-2" style="vertical-align: top">- 삭제</button>
+														</td>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td><button type="submit" class="btn btn-outline-success ml-2" style="vertical-align: top">+ 인버터추가</button></td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="tab-pane fade" id="plant04" role="tabpanel" aria-labelledby="plant04-tab">
+												<table class="table v4">
+													<colgroup>
+														<col width="10%">
+														<col width="20%">
+														<col width="*">
+													</colgroup>
+													<tbody>
+													<tr>
+														<th>ID</th>
+														<th>명칭</th>
+														<th>모델명</th>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td>
+															<select class="form-control" style="width: 50%;">
+															<option>다쓰테크 DSP-123K6-OD</option>
+															</select>
+															<button type="submit" class="btn btn-danger ml-2" style="vertical-align: top">- 삭제</button>
+														</td>
+													</tr>
+													<tr>
+														<td><input type="text" class="form-control" value="0123"></td>
+														<td><input type="text" class="form-control" value="203동"></td>
+														<td><button type="submit" class="btn btn-outline-success ml-2" style="vertical-align: top">+ 인버터추가</button></td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</td>
 								</tr>
 								</tbody>
 							</table>
 						</div>
-						<div class="col-md-12 text-right mb-2 mt-3"><button type="submit" class="btn btn-primary mr-2">추가</button><button type="submit" class="btn btn-primary">삭제</button></div>
+						<div class="col-md-12 text-right mb-2 mt-3"><button type="submit" class="btn btn-primary mr-2">등록</button><button type="submit" class="btn btn-primary">취소</button></div>
 					</div>
 				</div>
 			</div>
