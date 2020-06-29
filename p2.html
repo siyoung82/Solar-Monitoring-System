@@ -96,8 +96,8 @@
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
+        <nav class="sidebar sidebar-offcanvas">
+          <ul class="nav accordion" id="accordionSidebar">
             <li class="nav-item">
               <a class="nav-link select" href="#">
 				<i class="fas fa-city icon-sm"></i>
@@ -110,12 +110,13 @@
                 <span class="menu-title">대시보드</span>
               </a>
             </li>
-            <li class="nav-item">
-              <div class="nav-link" >
+            
+			<li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse01" aria-expanded="true" aria-controls="collapse01">
                 <i class="fas fa-solar-panel icon-sm"></i>
                 <span class="menu-title">태양광</span>
-              </div>
-              <div>
+              </a>
+              <div id="collapse01" class="collapse" aria-labelledby="heading01" data-parent="#accordionSidebar">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
                     <a class="nav-link" href="#">모니터링</a>
@@ -127,11 +128,11 @@
               </div>
             </li>
             <li class="nav-item">
-              <div class="nav-link" >
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse02" aria-expanded="true" aria-controls="collapse02"> 
 				<i class="fas fa-server icon-sm"></i>
                 <span class="menu-title">ESS</span>
-              </div>
-              <div>
+              </a>
+              <div id="collapse02" class="collapse" aria-labelledby="heading02" data-parent="#accordionSidebar">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
                     <a class="nav-link" href="#">모니터링</a>
@@ -146,11 +147,11 @@
               </div>
             </li>
 			<li class="nav-item">
-              <div class="nav-link" >
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse03" aria-expanded="true" aria-controls="collapse03"> 
                 <i class="fas fa-chart-bar icon-sm"></i>
                 <span class="menu-title">통계분석</span>
-              </div>
-              <div>
+              </a>
+              <div id="collapse03" class="collapse" aria-labelledby="heading03" data-parent="#accordionSidebar">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
                     <a class="nav-link" href="#">태양광 현황</a>
@@ -162,11 +163,11 @@
               </div>
             </li>
 			<li class="nav-item">
-              <div class="nav-link" >
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse04" aria-expanded="true" aria-controls="collapse04"> 
                 <i class="fas fa-file-alt icon-sm"></i>
                 <span class="menu-title">운영</span>
-              </div>
-              <div>
+              </a>
+              <div id="collapse04" class="collapse" aria-labelledby="heading04" data-parent="#accordionSidebar">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
                     <a class="nav-link" href="#">월별 보고서</a>
@@ -178,11 +179,11 @@
               </div>
             </li>
 			<li class="nav-item">
-              <div class="nav-link" >
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse05" aria-expanded="true" aria-controls="collapse05"> 
                 <i class="fas fa-cog icon-sm"></i>
                 <span class="menu-title">관리</span>
-              </div>
-              <div>
+              </a>
+              <div id="collapse05" class="collapse" aria-labelledby="heading05" data-parent="#accordionSidebar">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item">
                     <a class="nav-link" href="#">사용자 관리</a>
@@ -402,6 +403,8 @@
       <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
+	<script src="assets/vendors/jquery/easing/jquery.easing.min.js"></script>
+	<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
     <!-- plugins:js -->
     <script src="assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->

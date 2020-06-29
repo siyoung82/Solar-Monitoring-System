@@ -899,7 +899,7 @@
 .circle-ing {display: inline-block; width: 15px; height: 15px; background: #92d050; border-radius: 100px 100px; margin-top: 5px}
 .circle-warning {display: inline-block; width: 15px; height: 15px; background: #ffc000; border-radius: 100px 100px; margin-top: 5px}
 .circle-stop {display: inline-block; width: 15px; height: 15px; background: #ff0000; border-radius: 100px 100px; margin-top: 5px}
-.btm-footer {text-align: center; margin: 15px 0; display: block; width: 100%; color: #fff;}
+.btm-footer {text-align: center; margin: 15px 0; display: block; color: #fff; position: absolute; bottom: 20px; left: 50%; margin-left: -88px}
 .btm-footer a {color: #fff; font-size: 12px }
 .btm-footer img {margin-bottom: 10px}
 .weather-area04>div,.weather-area03>div,.weather-area02>div {display: inline-block; text-align: center; width: 50%; float: left; }
@@ -1093,3 +1093,33 @@ input:checked + .slider:before {
 .login-footer {background: #fff; position: fixed; bottom: 0; left: 0; right: 0; font-size: 12px; padding: 15px 15px 15px 145px;}
 .login-footer .footer-logo {position:absolute;  left: 20px;}
 .login-footer .footer-logo img {height: 30px; width: auto}
+
+/* nav */
+.sidebar {position: relative}
+@media (min-width: 768px){
+.sidebar .nav-item .nav-link[data-toggle=collapse].collapsed::after {
+	content: "\f054";
+	}
+}
+@media (min-width: 768px){
+.sidebar .nav-item .nav-link[data-toggle=collapse]::after {
+    width: 2rem;
+    text-align: center;
+    vertical-align: 0;
+    border: 0;
+    font-weight: 900;
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+	position: absolute;
+	right: 10px;
+}
+}
+.sidebar > .nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item .nav-link:before, .sidebar > .nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item .nav-link:before {
+	background-color: transparent!important
+	
+}
+.sidebar > .nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item .nav-link, .sidebar > .nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item .nav-link
+{font-size: 15px}
+
+.sidebar > .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile):not(.hover-open) > .nav-link:not([aria-expanded="false"]) {background: #00b0f0!important}
+.sidebar > .nav .nav-item:not(.hover-open) .collapse .sub-menu, .sidebar > .nav .nav-item:not(.hover-open) .collapsing .sub-menu {margin: 0}
